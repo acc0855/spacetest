@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    body {
+      background-image: url("vertical-shot-beautiful-starry-sky.jpg");
+      /* The image used */
+      background-color: #cccccc;
+      /* Used if the image is unavailable */
+      height: 500px;
+      /* You must set a specified height */
+      background-position: center;
+      /* Center the image */
+      background-repeat: no-repeat;
+      /* Do not repeat the image */
+      background-size: cover;
+      /* Resize the background image to cover the entire container */
+    }
+
+    .button {
+      position: fixed;
+      /* Define the top and left positions */
+      top: 90px;
+      left: 1000px;
+      /* You can also use other units like pixels (px), em, rem, etc. */
+    }
+
+    .butto {
+      position: fixed;
+      /* Define the top and left positions */
+      top: 80px;
+      left: 500px;
+      /* You can also use other units like pixels (px), em, rem, etc. */
+    }
+
+    .butt {
+      position: fixed;
+      /* Define the top and left positions */
+      top: 15px;
+      left: 1050px;
+      /* You can also use other units like pixels (px), em, rem, etc. */
+    }
+
+    .but {
+      position: fixed;
+      /* Define the top and left positions */
+      top: 70px;
+      left: 550px;
+      /* You can also use other units like pixels (px), em, rem, etc. */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="butto">
+    <img src="mars-11012-removebg-preview.png" class="card-img-top" alt="notfind" height="150">
+  </div>
+  <img id="h1" src="istockphoto-1367810652-1024x1024.png" class="card-img-top" alt="notfind" height="25">
+  <div class="button">
+    <img src="pexels-pixabay-41953-removebg-preview.png" class="card-img-top" alt="notfind" height="250">
+  </div>
+  <div class="butt">
+    <img id="maha" src="Screenshot_2023-09-20_185521-removebg-preview.png" class="card-img-top" alt="notfind" height="120">
+  </div>
+  <div class="but">
+    <img id="helllo" src="Screenshot_2023-09-20_190939-removebg-preview.png" class="card-img-top" alt="notfind" height="30">
+  </div>
+
+  <button id="hi">start</button>
+  <script src="script.js"></script>
+  <script>
+   
+    let message = document.getElementById("h1");
+
+    let hell = document.getElementById("hi"); // Change the id to "hi" since you want to target the button
+
+    hell.addEventListener("click", () => {
+      // Better to use a CSS class for the style here
+      message.style.cssText = "position: fixed; color: red";
+
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+      async function demo() {
+        let coords = message.getBoundingClientRect();
+
+        for (let a = 0; a <= 2000; a++) {
+          let g = 1;
+          let m = 1;
+          g += a;
+          m = 80;
+          message.style.left = coords.left + g + "px";
+          message.style.top = coords.bottom + m + "px";
+          console.log(g, m);
+          console.log("working");
+          await sleep(a * 0.0); // Adjust the sleep time if needed
+        }
+        console.log('Done');
+      }
+
+      demo();
+    });
+  </script>
+</body>
+
+</html>
